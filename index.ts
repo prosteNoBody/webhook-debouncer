@@ -87,6 +87,6 @@ server.get('/call', async (req, res) => {
     return { status: 2, 'message': 'debounce refresh' };
 });
 
-server.listen({ port: Number(process.env.APP_PORT) })
+server.listen({ port: Number(process.env.APP_PORT), host: '0.0.0.0' })
     .then(() => console.log(`Listening on port ${process.env.APP_PORT}`))
     .catch(e => console.log(e));
