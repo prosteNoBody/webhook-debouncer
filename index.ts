@@ -34,7 +34,7 @@ const webhooks: Webhooks = {};
 // check url validity
 const is_webhook_valid = (webhook: string): boolean => {
     try {
-        const decodedUri = decodeURI(webhook);
+        const decodedUri = decodeURIComponent(webhook);
         if (!is_web_uri(decodedUri)) return false;
         return true;
     } catch {
