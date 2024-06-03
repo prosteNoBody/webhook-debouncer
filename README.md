@@ -29,6 +29,7 @@ Since the pipeline is triggered manually with a webhook, there is no easy way to
 Default Values for Timers
 ----
 These values can be configured in `.env` file
+- `TOKEN=secret` - control of secret for authorized access
 - `TIMEOUT=420`
 - `DEBOUNCE=40`
 
@@ -37,11 +38,11 @@ API
 The server exposes only one API endpoint, `/call`, which registers the desired destination and applies the debouncer logic to that webhook.
 
 Query parameters
+- `token` - token must be same as in `.env` file, otherwise http code `401` will return
 - `webhook` - the webhook URL to be called after the debounce or timeout period.
-
 - `debounce` - overrides the default debounce time.
-
 - `timeout` - overrides the default timeout time.
+- `method` - used for overwrite default `POST` method to `GET` method
 
 
 ### Note
