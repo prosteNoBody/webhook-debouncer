@@ -26,6 +26,10 @@ The problem is that multiple pipelines will be triggered when we make multiple c
 Since the pipeline is triggered manually with a webhook, there is no easy way to stop unrelated pipelines.
 ```
 
+Diagram
+----
+![Diagram](diagram.png)
+
 Default Values for Timers
 ----
 These values can be configured in `.env` file
